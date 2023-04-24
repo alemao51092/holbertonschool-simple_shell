@@ -8,6 +8,10 @@
 #include<sys/types.h>
 #include<sys/wait.h>
 
+char **tokenize(char *comand, int read);
+int free_token(char **comand);
+void excecute(char **tokenargv);
+
 #endif
 
 

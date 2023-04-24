@@ -17,5 +17,16 @@ int main(void)
 		    printf("\n");
 		    exit (1);
 		}
+        tokenargv = tokenize(comand, read);
+        if (tokenargv == NULL)
+        {
+            free(comand);
+            free_token(tokenargv);
+            exit(0);
+        }
+        excecute(tokenargv);
+        free_token(tokenargv), tokenargv = NULL;
+        
+
     }
 }

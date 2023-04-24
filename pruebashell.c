@@ -60,6 +60,8 @@ int main(int ac, char *av[])
 			token = strtok(NULL, " ");
 		}
 		argv[i] = NULL;
+		
+		
 		newpid = fork();
 		if (newpid == -1)
 		{
