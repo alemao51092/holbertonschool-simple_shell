@@ -2,6 +2,7 @@
 
 char **tokenize(char *comand, int read)
 {
+
 char *copycom = NULL;
 char *token;
 char **argv;

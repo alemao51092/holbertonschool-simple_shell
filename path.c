@@ -20,5 +20,4 @@ char **_path(void)
         
     }
     return (ptokens);
-
 }
