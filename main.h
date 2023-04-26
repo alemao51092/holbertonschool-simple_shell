@@ -8,6 +8,8 @@
 #include<sys/types.h>
 #include<sys/wait.h>
 #include<sys/stat.h>
+#include<limits.h>
+#include<signal.h>
 
 extern char **environ;
 
@@ -21,7 +23,7 @@ char *_strcat(char *dest, char *src);
 int num_count(char *var);
 char **_path(void);
 char *get_env(char *var);
-
+char **get_comand(char **tokens);
 
 #endif
 
