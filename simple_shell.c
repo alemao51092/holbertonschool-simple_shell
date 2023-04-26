@@ -24,8 +24,7 @@ int main(void)
             free_token(tokenargv);
             exit(0);
         }
-        excecute(tokenargv);
-        free_token(tokenargv), tokenargv = NULL;
+        
         
 
     }
