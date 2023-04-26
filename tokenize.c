@@ -55,10 +55,9 @@ int free_token(char **comand)
     if (!comand)
         return(0);
 
-        for (x = 0; comand[x] != NULL; x++)
+    for (x = 0; comand[x] != NULL; x++)
             free(comand[x]);
-        
-        free(comand);
+		free(comand);
         comand = NULL;
         
         return(0);
@@ -67,8 +66,8 @@ int free_token(char **comand)
 int num_count(char *var)
 {
 	int i = 0;
-	char *aux; // Se declara un puntero "aux" para ir guardando cada token (subcadena) de la cadena "var".
-	char *sub = strdup(var);// Se hace una copia de la cadena "var" para no alterar la original.
+	char *aux; /* Se declara un puntero "aux" para ir guardando cada token (subcadena) de la cadena "var".*/
+	char *sub = strdup(var);/* Se hace una copia de la cadena "var" para no alterar la original.*/
 
 	aux = strtok(sub, " :	\n");
 	while (aux)

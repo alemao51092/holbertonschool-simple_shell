@@ -11,7 +11,7 @@ int main(void)
     {
         if (isatty(0) == 1)
             printf("Ale ~$: ");
-            read = getline(&comand,&n, stdin);
+        read = getline(&comand,&n, stdin);
 		if(read == -1)
 		{
 		    printf("\n");
