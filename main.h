@@ -23,9 +23,6 @@ char **_path(void);
 char *get_env(char *var);
 
 
-
-
-
 #endif
 
 

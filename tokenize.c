@@ -78,4 +78,3 @@ int num_count(char *var)
 	free(sub);
 	return (i);
 }
-
