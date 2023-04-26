@@ -14,8 +14,8 @@ int main(void)
         read = getline(&comand,&n, stdin);
 		if(read == -1)
 		{
-		    printf("\n");
-		    exit (1);
+		    free(comand);
+		    exit(0);
 		}
         tokenargv = tokenize(comand, read);
         if (tokenargv == NULL)
@@ -26,5 +26,13 @@ int main(void)
         }
         excecute(tokenargv);
         free(tokenargv), tokenargv = NULL;
+        if (_strcmp(comand, "exit") == 0)
+        {
+            free(comand);
+            return (0);
+        }
     }
+    free_token(tokenargv);
+    exit(EXIT_SUCCESS);
+    return (0);
 }
