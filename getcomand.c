@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * get_comand - main function
+ * Return: 0
+ * @tokens: cadena de comandos
+*/
 
 char **get_comand(char **tokens)
 {
@@ -38,4 +42,5 @@ char **get_comand(char **tokens)
 	free(function);
 
 	return (0);
+
 }

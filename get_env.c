@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * get_env - main function
+ * Return: 0
+ * @var: Variable Entrono
+*/
 char *get_env(char *var)
 {
 	char **env = environ;
@@ -29,4 +33,5 @@ char *get_env(char *var)
 		con = 0;
 	}
 	return (0);
+
 }

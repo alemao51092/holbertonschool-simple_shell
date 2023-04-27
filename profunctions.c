@@ -14,7 +14,12 @@ int _strlen(char *s)
 		i++;
 	return (i);
 }
-
+/**
+ * _strcat - main function
+ * @dest: ch
+ * @src: ch1
+ * Return: j
+*/
 char *_strcat(char *dest, char *src)
 {
 	int i = 0;
