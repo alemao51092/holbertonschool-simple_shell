@@ -7,7 +7,9 @@
  */
 int excecute(char **tokenargv)
 {
-	pid_t w, newpid, char **function, int status;
+	pid_t w, newpid; 
+	char **function; 
+	int status;
 
 	newpid = fork();
 	if (newpid == -1)
@@ -27,11 +29,8 @@ int excecute(char **tokenargv)
 	}
 	else
 	{
-		while (!WIFEXITED(status) && !WIFSIGNALED(status))
-		{
 			do {
 				w = waitpid(newpid, &status, WUNTRACED);
-
 				if (w == -1)
 					exit(EXIT_FAILURE);
 				if (WIFSTOPPED(status))
@@ -39,8 +38,7 @@ int excecute(char **tokenargv)
 					printf("Proceso suspendido con el código %d\n", WSTOPSIG(status));
 					kill(newpid, SIGCONT);
 				}
-			} while (!WIFEXITED(status) && !WIFSIGNALED(status))
-		}
+			} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
 	return (status);
 }
