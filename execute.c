@@ -1,12 +1,12 @@
 #include "main.h"
 #include <sys/wait.h>
 
-void excecute(char **tokenargv)
+int excecute(char **tokenargv)
 {
 	pid_t w, newpid;
 	char **function;
-
 	int status;
+	
 	newpid = fork();
 
 	if (newpid == -1)
@@ -44,4 +44,5 @@ void excecute(char **tokenargv)
 		while (!WIFEXITED(status) && !WIFSIGNALED(status));
         
     }
+	return (status);
 }

@@ -8,7 +8,7 @@ char **_path(void)
     int num =  0;
     int i = 0;
 
-    num  = num_count(path);
+    num  = numcount(path);
     ptokens = _calloc(num + 1, sizeof(char *));
     ptoken = strtok(path, ":");
 

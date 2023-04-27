@@ -13,14 +13,14 @@
 
 extern char **environ;
 
-char **tokenize(char *comand, int read);
+char **tokenize(char *comand);
 int free_token(char **comand);
-void excecute(char **tokenargv);
+int excecute(char **tokenargv);
 int _strcmp(char *s1, char *s2);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int _strlen(char *s);
 char *_strcat(char *dest, char *src);
-int num_count(char *var);
+int numcount(char *var);
 char **_path(void);
 char *get_env(char *var);
 char **get_comand(char **tokens);

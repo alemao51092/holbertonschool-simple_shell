@@ -17,7 +17,7 @@ int main(void)
 		    free(comand);
 		    exit(0);
 		}
-        tokenargv = tokenize(comand, read);
+        tokenargv = tokenize(comand);
         if (tokenargv == NULL)
         {
             free(comand);
