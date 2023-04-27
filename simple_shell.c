@@ -15,7 +15,7 @@ int main(void)
 		if (isatty(0) == 1)
 			printf("Ale ~$: ");
 		read = getline(&comand, &n, stdin);
-		if (read == -1)
+		if(read == -1)
 		{
 			free(comand);
 			exit(0);
@@ -32,7 +32,7 @@ int main(void)
 		if (_strcmp(comand, "exit") == 0)
 		{
 			free(comand);
-			return (0);
+			exit(0);
 		}
 	}
 	free_token(tokenargv);
