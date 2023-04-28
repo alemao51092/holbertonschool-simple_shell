@@ -22,7 +22,7 @@ int excecute(char **tokenargv)
 		function = get_comand(tokenargv);
 		if (execve(function[0], function, environ) == -1)
 		{
-			free(tokenargv);
+			free(function);
 			exit(EXIT_FAILURE);
 		}
 		exit(EXIT_SUCCESS);

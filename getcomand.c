@@ -40,7 +40,6 @@ char **get_comand(char **tokens)
 	}
 	free(tokens);
 	free_token(path);
-	free(function);
 
 	return (0);
 

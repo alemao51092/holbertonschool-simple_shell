@@ -6,8 +6,8 @@
 int main(void)
 {
 	char *comand = NULL;
-	size_t n = 0;
-	char **tokenargv;
+	size_t n = 1024;
+	char **tokenargv = NULL;
 	int read = 0;
 	int status = 0;
 
@@ -16,7 +16,7 @@ int main(void)
 		if (isatty(0) == 1)
 			printf("Ale ~$: ");
 		read = getline(&comand, &n, stdin);
-		if(read == -1)
+		if(read == -1 || _strcmp(comand, "exit\n") == 0)
 		{
 			free(comand);
 			exit(0);
@@ -28,12 +28,6 @@ int main(void)
 			free(tokenargv);
 			continue;
 		}
-		else if (_strcmp(tokenargv[0], "exit") == 0)
-		{
-			status = 2;
-			free_token(tokenargv);
-			exit(status);
-		}
 		if (tokenargv == NULL)
 		{
 			free(comand);
@@ -44,6 +38,5 @@ int main(void)
 		free(tokenargv), tokenargv = NULL;
 	}
 	free_token(tokenargv);
-	exit(EXIT_SUCCESS);
-	return (0);
+	return (status);
 }
