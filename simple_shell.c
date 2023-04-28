@@ -29,7 +29,7 @@ int main(void)
 		}
 		else if (_strcmp(tokenargv[0], "exit") == 0)
 		{
-			free(tokenargv);
+			free_token(tokenargv);
 			exit(0);
 		}
 		if (tokenargv == NULL)
