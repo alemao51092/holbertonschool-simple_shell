@@ -82,7 +82,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	for (count = 0; count < tam; count++)
 		p[count] = 0;
-		free(p)
 	return (p);
 }
 /**
