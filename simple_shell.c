@@ -9,6 +9,7 @@ int main(void)
 	size_t n = 0;
 	char **tokenargv;
 	int read = 0;
+	int status = 0;
 
 	while (1)
 	{
@@ -29,8 +30,9 @@ int main(void)
 		}
 		else if (_strcmp(tokenargv[0], "exit") == 0)
 		{
+			status = 2;
 			free_token(tokenargv);
-			exit(0);
+			exit(status);
 		}
 		if (tokenargv == NULL)
 		{
