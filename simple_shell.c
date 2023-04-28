@@ -21,6 +21,12 @@ int main(void)
 			exit(0);
 		}
 		tokenargv = tokenize(comand);
+		if (_strcmp(tokenargv[0], "env") == 0)
+		{
+			print_env();
+			free(tokenargv);
+			continue;
+		}
 		if (tokenargv == NULL)
 		{
 			free(comand);

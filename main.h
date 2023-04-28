@@ -13,7 +13,7 @@
 
 extern char **environ;
 
-
+void print_env(void);
 char **tokenize(char *comand);
 int free_token(char **comand);
 int excecute(char **tokenargv);
