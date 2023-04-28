@@ -24,6 +24,7 @@ char **get_comand(char **tokens)
 		{
 			free(path);
 			perror("Error");
+			free(tokens);
 			exit(EXIT_FAILURE);
 		}
 		strcpy(function, path[i]);

@@ -76,10 +76,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	p = malloc(tam);
 	if (p == NULL)
+	{
 		return (NULL);
+	}
 
 	for (count = 0; count < tam; count++)
 		p[count] = 0;
+		free(p)
 	return (p);
 }
 /**

@@ -14,7 +14,10 @@ char **tokenize(char *comand)
 	num = numcount(comand);
 	tokens = _calloc(num + 1, sizeof(char *));
 	if (!tokens)
+	{
+		free(tokens);
 		return (0);
+	}
 	token = strtok(comand, "      \n");
 	while (token)
 	{

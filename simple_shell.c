@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - basic shell proyect
+ * main - basic shell project
  * Return: 0
 */
 int main(void)
