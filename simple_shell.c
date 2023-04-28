@@ -27,6 +27,11 @@ int main(void)
 			free(tokenargv);
 			continue;
 		}
+		else if (_strcmp(tokenargv[0], "exit") == 0)
+		{
+			free(tokenargv);
+			exit(0);
+		}
 		if (tokenargv == NULL)
 		{
 			free(comand);
@@ -35,11 +40,6 @@ int main(void)
 		}
 		excecute(tokenargv);
 		free(tokenargv), tokenargv = NULL;
-		if (_strcmp(comand, "exit") == 0)
-		{
-			free(comand);
-			exit(0);
-		}
 	}
 	free_token(tokenargv);
 	exit(EXIT_SUCCESS);
