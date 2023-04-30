@@ -16,7 +16,7 @@ int main(void)
 		if (isatty(0) == 1)
 			printf("Ale ~$: ");
 		read = getline(&comand, &n, stdin);
-		if(read == -1 || _strcmp(comand, "exit\n") == 0)
+		if (read == -1 || _strcmp(comand, "exit\n") == 0)
 		{
 			free(comand);
 			exit(0);
