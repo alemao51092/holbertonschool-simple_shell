@@ -7,8 +7,8 @@
  */
 int excecute(char **tokenargv)
 {
-	pid_t w, newpid; 
-	char **function; 
+	pid_t w, newpid;
+	char **function;
 	int status;
 
 	newpid = fork();
